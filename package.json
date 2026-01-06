@@ -1,0 +1,16 @@
+{
+  "name": "@instago/ascii",
+  "version": "1.0.1",
+  "description": "Module ascii",
+  "main": "index.js",
+  "license": "SEE LICENSE IN LICENSE",
+  "keywords": [
+    "instago",
+    "ascii"
+  ],
+  "files": [
+    "index.js",
+    "ReadMe.MD",
+    "LICENSE"
+  ]
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ascii Documentation</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 48px 24px;
+        font-family: Arial, sans-serif;
+        background: #0f172a;
+        color: #e2e8f0;
+      }
+      main {
+        max-width: 760px;
+        margin: 0 auto;
+      }
+      h1 {
+        margin: 0 0 12px;
+        font-size: 28px;
+      }
+      .intro {
+        font-size: 16px;
+        color: #e2e8f0;
+      }
+      p {
+        margin: 0 0 16px;
+        color: #cbd5f5;
+      }
+      ul {
+        margin: 12px 0 0;
+        padding-left: 18px;
+      }
+      a {
+        color: #93c5fd;
+      }
+      .section {
+        margin-top: 28px;
+      }
+      .muted {
+        color: #94a3b8;
+        font-size: 14px;
+        margin: 6px 0 0;
+      }
+      .code {
+        background: #0b1220;
+        border: 1px solid #1e293b;
+        border-radius: 10px;
+        padding: 16px;
+        white-space: pre-wrap;
+        word-break: break-word;
+        font-size: 13px;
+        line-height: 1.5;
+        color: #e2e8f0;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>module/ascii - V8 module</h1>
+      <p class="intro">ASCII helpers to encode/decode payloads without pulling in a heavyweight dependency. Use it when you just need base64/ASCII data helpers while keeping your workflow fast and readable. Learn more at https://instago.ai.</p>
+      <p class="muted">Learn more at <a href="https://instago.ai" target="_blank" rel="noopener">https://instago.ai</a>.</p>
+      <div class="section">
+        <h2>Technical reference</h2>
+        <h1>module/ascii - V8 module</h1>
+<p>ASCII helpers to encode/decode payloads without pulling in a heavyweight dependency. Use it when you just need base64/ASCII data helpers while keeping your workflow fast and readable. Learn more at https://instago.ai.</p>
+<h2>Technical reference</h2>
+<h3>Usage</h3>
+<ul>
+<li><code>const ascii = require(&#x27;ascii@latest&#x27;);</code></li>
+</ul>
+<h3>Exports</h3>
+<ul>
+<li><code>encode(text)</code> → ASCII-safe base64 string.</li>
+<li><code>decode(b64)</code> → UTF-8 text from an ASCII-safe base64 string.</li>
+<li><code>encodeJson(obj)</code> → base64 of JSON (handles object serialization).</li>
+<li><code>decodeJson(b64)</code> → parse JSON encoded via <code>encodeJson</code>.</li>
+<li><code>encodeHtml(text)</code> → similar to <code>encode</code> but also escapes <code>+</code>/<code>/</code> to stay URL-safe.</li>
+<li><code>decodeHtml(str)</code> → reverse of <code>encodeHtml</code>.</li>
+</ul>
+<h3>Configuration</h3>
+<ul>
+<li>No environment keys are required. Set <code>ascii.debug=1</code> in your workflow envs if you want extra logging.</li>
+</ul>
+<h3>Example</h3>
+<pre class="code"><code>
+const ascii = require(&#x27;ascii@latest&#x27;);
+
+const encoded = ascii.encodeJson({ foo: &#x27;bar&#x27; });
+console.log(&#x27;payload&#x27;, encoded);
+
+const decoded = ascii.decodeJson(encoded);
+console.log(&#x27;decoded&#x27;, decoded);
+</code></pre>
+      </div>
+      
+    </main>
+  </body>
+</html>
